@@ -18,8 +18,5 @@ void setup() {
 
 //El programa en si, ejecuta indefinidamente.
 void loop() {
-<<<<<<< HEAD
-=======
-    
->>>>>>> mover
+  
 }
