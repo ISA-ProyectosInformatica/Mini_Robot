@@ -12,18 +12,5 @@ void setup() {
 
 //El programa en si, ejecuta indefinidamente.
 void loop() {
-    serv0.write(0);
-    delay(250);
-    serv0.write(170);
-    delay(500);
-    serv0.write(150);
-    delay(500);
-    serv0.write(170);
-    delay(500);
-    serv0.write(140);
-    delay(500);
-    serv0.write(170);
-    delay(500);
-    serv0.write(0);
-    delay(500);
+    
 }
