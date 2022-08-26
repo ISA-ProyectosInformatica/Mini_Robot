@@ -7,6 +7,7 @@
 //Librearia desarrollada por nosotros con el objetivo
 //de almacenar funciones de movimiento basicas
 #include <BasicMovement.h>
+#include <GlobalData.h>
 
 //Declaramos un objeto Servo llamado serv0.
 Servo serv0;
@@ -18,5 +19,6 @@ void setup() {
 
 //El programa en si, ejecuta indefinidamente.
 void loop() {
-  
+  serv0.write(STANDBY);
+  saludar(serv0);
 }

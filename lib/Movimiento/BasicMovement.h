@@ -1,4 +1,4 @@
-#define STANDBY 15
+#include <GlobalData.h>
 
 void saludar(Servo serv){
     int i;
