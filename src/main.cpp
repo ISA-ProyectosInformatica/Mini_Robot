@@ -9,9 +9,10 @@
 #include <BasicMovement.h>
 #include <GlobalData.h>
 
-//Declaramos un objeto Servo llamado serv0.
-Servo serv0;
+//Libreria de Otto (nombre del proyecto del robot)
+#include <Otto.h>
 
+Servo serv0;
 //"Inicio" del programa.
 void setup() {
   serv0.attach(8);
