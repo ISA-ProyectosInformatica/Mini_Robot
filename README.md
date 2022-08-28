@@ -1,2 +1,2 @@
 # Mini_Robot
-# Branch destinada al desarrollo continuo  pero "estable" del proyecto.
+Branch destinada a la experimentacion con la libreria "Otto.h".
