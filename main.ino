@@ -12,48 +12,40 @@ Servo serv4;
 Servo servs[5];
 
 void saludar(Servo);
+void home_custom();
 
 void setup(){
-    Serial.print("servs[0]");
-    serv1.attach(2);
-    serv2.attach(3);
-    serv3.attach(4);
-    serv4.attach(5);
-    serv0.attach(6);
+    for(int i =2; i<=6; i++)
+        servs[i].attach(i);
+    pinMode(8, INPUT_PULLUP);
 }
 
 void loop(){
-    serv0.write(60);
-    serv1.write(60);
-    serv2.write(60);
-    serv3.write(60);
-    serv4.write(60);
-    delay(1500);
-    serv0.write(0);
+    int state;
+    state = digitalRead(8);
+
+    if(state == LOW)
+        move_90(servs);
+        delay(1000);
+        home_custom(servs);
+    /*serv0.write(0);
     serv1.write(0);
     serv2.write(0);
     serv3.write(0);
     serv4.write(0);
-    delay(1000000);
-    /*serv0.write(90);
-    serv1.write(90);
-    serv2.write(90);
-    serv3.write(90);
-    serv4.write(90);
     delay(1500);*/
 }
 
-void saludar(Servo serv){
-    int i;
+void home_custom(Servo[]){
+    for(int i=0; i<=5; i++)
+        servs[i].write(0);
+    delay(1000);
 
-    serv.write(STANDBY);
+    for(int i=0; i<=5; i++)
+        servs[i].write(0);
+}
 
-    for(i=0; i<2; i++){
-        delay(500);
-        serv.write(175);
-        delay(500);
-        serv.write(135);
-    }
-
-    serv.write(STANDBY);
+void move_90(Servo[]){
+    for (int i=0; i<=5; i++)
+        servs[i].write(90);
 }
