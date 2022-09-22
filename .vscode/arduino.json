@@ -1,6 +1,6 @@
 {
     "board": "arduino:avr:uno",
     "port": "/dev/ttyUSB0",
-    "sketch": "ysy.ino",
+    "sketch": "ysy/ysy.ino",
     "programmer": "arduino:avrispmkii"
 }
